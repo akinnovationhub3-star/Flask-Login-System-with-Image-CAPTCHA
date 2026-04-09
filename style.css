@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb);
+    color: #fff;
+}
+
+/* Container for login/registration */
+.container {
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 30px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+h1, h2 {
+    margin-bottom: 20px;
+    color: #fffb;
+}
+
+/* Inputs */
+input {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #ddd;
+}
+
+/* Input Focus */
+input:focus {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+/* Buttons */
+button, .btn {
+    width: 60%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    margin: 15px auto;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00f7ff, #00ff88);
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f7ff;
+}
+
+/* Links for login/register */
+.links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.links a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #00f7ff;
+    text-decoration: underline;
+}
+
+/* Error Messages */
+.error {
+    color: #ff6b6b;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* CAPTCHA Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* small square boxes */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* CAPTCHA Card Images */
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+    object-fit: cover; /* keep square */
+    cursor: pointer;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card input {
+    display: none;
+}
+
+/* Selected Image Highlight */
+.card input:checked + img {
+    border: 3px solid #00f7ff;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+    input, button {
+        width: 90%;
+    }
+    .grid {
+        grid-template-columns: repeat(3, 80px);
+        gap: 8px;
+    }
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+}

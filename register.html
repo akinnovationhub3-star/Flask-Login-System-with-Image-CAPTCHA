@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>📝 Register</h1>
+    <form method="POST" action="/register">
+        <input name="username" placeholder="Enter Username" required>
+        <input name="password" type="password" placeholder="Enter Password" required>
+        <input name="confirm_password" type="password" placeholder="Confirm Password" required>
+        <button>Register</button>
+    </form>
+
+    <div class="links">
+        <a href="/">Back to Login</a>
+    </div>
+
+    <p class="error">{{message}}</p>
+</div>
+</body>
+</html>

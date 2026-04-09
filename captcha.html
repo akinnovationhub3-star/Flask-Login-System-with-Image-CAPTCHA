@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Select all images with <span>{{category.upper()}}</span></h2>
+
+<form method="POST" action="/verify">
+
+<div class="grid">
+{% for img in images %}
+<label class="card">
+<input type="checkbox" name="selected" value="{{loop.index0}}">
+<img src="{{ url_for('static', filename='images/' + img) }}">
+</label>
+{% endfor %}
+</div>
+
+<button class="btn">Verify</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
