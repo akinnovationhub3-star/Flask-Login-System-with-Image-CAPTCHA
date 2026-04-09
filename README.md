@@ -46,7 +46,7 @@ project/
 ## 🔹 How to Run
 1. Clone the repository:  
    ```bash
-   git clone <YOUR_GITHUB_LINK>
+   git clone https://github.com/akinnovationhub3-star/Flask-Login-System-with-Image-CAPTCHA.git
 
 Navigate to the project folder:
 
